@@ -1,0 +1,251 @@
+html, body{
+    width: 100%;
+    height: 100vh; /* 100% of the viewport height */
+    margin: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+h1{
+    position: absolute;
+    font-family: 'Syncopate', sans-serif;
+    font-size: 35px;
+    padding: 10px;
+    margin: 0;
+    padding-top: 0;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    color: #191917;
+}
+
+span{
+    z-index: 1;
+  }
+
+
+  h2{
+    color: #191917;   
+    outline: 1px solid #191917;  
+    top: 60px;
+    margin: 0;
+    font-weight: 150;
+    padding: 5px; 
+    display: inline;
+    white-space: pre-line; 
+    position: relative;
+    line-height: 1;
+    font-size:30px;
+  }
+ 
+
+  .fz-big{
+      font-size:50px;
+  }
+
+  .fz-med{
+    font-size:20px;
+}
+
+
+.symbols-name{
+    left: 2%;
+    top: 90px;
+}
+ .name-text{
+    left: 2%;
+    top: 15%;
+    font-family: 'Syncopate', sans-serif;
+}
+
+.date, .hour{
+    font-family: 'Syncopate', sans-serif;
+    position: absolute;
+    left: 2%; 
+}
+.date{
+    bottom: 0;
+    max-width: 270px;  
+    margin-bottom: 270px;
+}
+
+.bigger{
+    font-size: 30px;
+}
+.hour{
+    bottom: 243px;
+}
+
+.column-text{
+    position: absolute;
+    right: 0;
+    top: 10px;
+    font-weight: lighter;
+}
+.column-text span{
+    writing-mode: vertical-lr;
+    font-size: 70px;
+    letter-spacing: 0.2em;
+}
+
+.venue-text{
+    left:2%;
+    top:73%;
+    position:sticky;
+}
+.venue-ox{
+    font-size:12px;
+    font-family: 'Syncopate', sans-serif;
+    text-transform: capitalize;
+}
+.container {  
+   
+    height: 100%;
+    max-width: 800px;
+    margin: -270px auto 0;
+    background-color:#F5F5F3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . . . . . . . . ."
+      ". . . . . . . . . ."
+      ". . . . . . red-1 red-1 . ."
+      ". . . . . . red-1 red-1 . ."
+      ". . . . red-2 red-2 red-2 . . ."
+      "red-3 red-3 red-3 red-3 red-3 red-3 red-3 . . ."
+      "red-3 red-3 red-3 red-3 red-3 red-3 red-3 . . ."
+      ". . . . red-4 red-4 red-4 . . ."
+      ". . . . . red-5 red-5 red-5 . ."
+      ". . . . . red-5 red-5 red-5 . ."
+      ". . . . . red-5 red-5 red-5 . ."
+      ". . red-6 red-6 red-6 red-6 . . . ."
+      ". . red-6 red-6 red-6 red-6 . . . ."
+      ". . . red- red- red- . . . ."
+      ". . . . red-8 red-8 . . . ."
+      ". . . red-9 red-9 red-9 . . . ."
+      ". . . red-9 red-9 red-9 . . . ."
+      ". . . . . red-10 red-10 red-10 . ."
+      ". . . . . . red-11 red-11 . ."
+      ". . . . . . . . . ."
+      ". . . . . . . . . .";
+  }
+  
+  .red-1 { grid-area: red-1; }
+  
+  .red-2 { grid-area: red-2; }
+  
+  .red-3 { grid-area: red-3; }
+  
+  .red-4 { grid-area: red-4; }
+  
+  .red-5 { grid-area: red-5; }
+  
+  .red-6 { grid-area: red-6; }
+  
+  .red- { grid-area: red-; }
+  
+  .red-8 { grid-area: red-8; }
+  
+  .red-9 { grid-area: red-9; }
+  
+  .red-10 { grid-area: red-10; }
+  
+  .red-11 { grid-area: red-11; }
+
+  .blue-1 { grid-area: 3 / 3 / 5 / 5; }
+.blue-2 { grid-area: 5 / 4 / 6 / 7; }
+.blue-3 { grid-area: 6 / 4 / 8 / 11; }
+.blue-5 { grid-area: 9 / 4 / 12 / 7; }
+.blue-4 { grid-area: 8 / 3 / 9 / 6; }
+.blue-6 { grid-area: 12 / 4 / 14 / 8; }
+.blue-7 { grid-area: 14 / 6 / 15 / 9; }
+.blue-8 { grid-area: 15 / 6 / 16 / 8; }
+.blue-9 { grid-area: 16 / 6 / 18 / 9; }
+.blue-10 { grid-area: 18 / 4 / 19 / 7; }
+.blue-11 { grid-area: 19 / 4 / 20 / 6; }
+
+  
+  .red{
+      background-color:#C34438;
+  }
+
+  .red:hover ~ .blue{
+      display:inline-block
+  }
+
+  .blue{
+      background-color:#C2D9E5;
+      display:none;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  @media only screen and (min-width: 768px) {
+    h1{
+        font-size: 55px;
+    }
+    .fz-med{
+        font-size:30px;
+    }
+    
+    .symbols-name{
+        top: 135px;
+    }
+
+    .symbols-name, .name-text, .date, .hour, .venue-text{
+        left: calc((100% - 770px) /2);
+    }   
+    .column-text span{
+        font-size: 95px;     
+    }
+    .column-text {
+        right: calc((100% - 770px) /2);
+    }
+    .date{
+        max-width: 100%;  
+    }
+    .hour{
+        bottom: 230px;
+    }
+    .bigger{
+        font-size: 40px;
+    }
+    .venue-text{
+        top:80%;     
+    }
+    .venue-ox{
+        font-size:20px;
+        font-weight: 900;      
+    }
+    
+  }
+
+  @media only screen and (min-width: 992px) {
+      .container{
+          margin-top: -360px;
+        }
+        .name-text{
+            top: 16%;
+        }
+        h2{
+            top: 140px;
+            font-size:40px;
+        }
+        .column-text span{
+            font-size: 85px;
+        }
+    }
+ 
+ 
+  
+
+
+
+
